@@ -73,21 +73,18 @@
 					<span class="text-xl">+</span>
 				</button>
 
-
 				<!-- Tooltip -->
 				<div
 					class="tooltip mt-2 bg-gray-800 text-white text-sm px-3 py-1 rounded z-0"
 					:class="[
-						isShowTooltip
-							? 'showing'
-							: 'closing',
+						isShowTooltip ? 'showing' : 'closing',
 						tooltipPosition === 'left'
 							? 'left-[-55%]'
-							: 'right-[-55%]'
+							: 'right-[-55%]',
 					]"
 				>
 					{{ tooltipMessage }}
-				</div>				
+				</div>
 			</div>
 		</div>
 	</div>
@@ -97,14 +94,14 @@
 import { ref, computed } from "vue";
 
 const value = ref(1);
-const unit = ref('%');
-const inputValue = ref('1');
+const unit = ref("%");
+const inputValue = ref("1");
 const isFocused = ref(false);
 const isHovering = ref(false);
 const isShowTooltip = ref(false);
 const tooltipMessage = ref("");
-const tooltipTimeout = ref(0);
-const tooltipPosition = ref('center'); // left, center, right
+const tooltipTimeout = ref<any>(0);
+const tooltipPosition = ref("center"); // left, center, right
 
 // Validation and button disabling logic
 const shouldDisableDecrement = computed(() => {
@@ -154,7 +151,7 @@ function handleBlur() {
 		inputValue.value = "0";
 		value.value = 0;
 		showTooltip("Value must greater than 0");
-		tooltipPosition.value = 'left';
+		tooltipPosition.value = "left";
 		return;
 	}
 
@@ -167,7 +164,7 @@ function handleBlur() {
 			value.value = 100;
 			inputValue.value = "100";
 			showTooltip("Value must smaller than 100");
-			tooltipPosition.value = 'right';
+			tooltipPosition.value = "right";
 		} else {
 			value.value = parsedValue;
 			inputValue.value = sanitized;
@@ -227,7 +224,7 @@ function showTooltip(message: string) {
 /* style for tooltip element when don't want the class to be too long */
 .tooltip {
 	width: fit-content;
-	position: absolute; 
+	position: absolute;
 	top: 0;
 	opacity: 0;
 	transition: all ease 0.2s;
@@ -236,12 +233,12 @@ function showTooltip(message: string) {
 }
 
 .tooltip.closing {
-	top: 0; 
-	opacity: 0; 
+	top: 0;
+	opacity: 0;
 }
 
 .tooltip.showing {
-	top: calc(-100% - 8px); 
+	top: calc(-100% - 8px);
 	opacity: 1;
 }
 
