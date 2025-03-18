@@ -2,6 +2,19 @@
 
 exports[`toUpperCase 1`] = `
 "<div class="w-screen h-screen bg-neutral-950 flex items-center justify-center text-neutral-100">
-  <div class="w-96 bg-neutral-800 p-4 rounded-lg"> Your component go here </div>
+  <div class="w-96 bg-neutral-800 p-4 rounded-lg">
+    <div class="bg-gray-900 p-4 rounded-lg">
+      <div class="mb-4 flex justify-between items-center">
+        <div class="text-white mb-2">Unit</div>
+        <div class="flex"><button class="px-4 py-2 rounded-l bg-gray-700 text-white"> % </button><button class="px-4 py-2 rounded-r bg-gray-800 text-gray-300"> px </button></div>
+      </div>
+      <div class="flex justify-between items-center">
+        <div class="text-white mb-2">Value</div>
+        <div class="relative flex items-center rounded bg-gray-800"><button class="px-3 py-2 z-1 text-white hover:bg-gray-700"><span class="text-xl">−</span></button><input type="text" class="text-white text-center w-16 outline-none z-1 bg-gray-800"><button class="px-3 py-2 z-1 text-white hover:bg-gray-700"><span class="text-xl">+</span></button><!-- Tooltip -->
+          <div class="tooltip mt-2 bg-gray-800 text-white text-sm px-3 py-1 rounded z-0 closing right-[-55%]"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>"
 `;
