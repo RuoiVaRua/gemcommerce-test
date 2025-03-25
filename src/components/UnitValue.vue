@@ -1,15 +1,15 @@
 <template>
-	<div class="bg-gray-900 p-4 rounded-lg">
+	<div class="bg-[#151515] p-4 rounded-lg">
 		<div class="mb-4 flex justify-between items-center">
-			<div class="text-white mb-2">Unit</div>
+			<div class="text-[#AAAAAA] mb-2">Unit</div>
 			<div class="flex">
 				<button
 					@click="switchUnit('%')"
 					class="px-4 py-2 rounded-l"
 					:class="
 						unit === '%'
-							? 'bg-gray-700 text-white'
-							: 'bg-gray-800 text-gray-300'
+							? 'bg-[#424242] text-[#F9F9F9]'
+							: 'bg-[#212121] text-[#AAAAAA]'
 					"
 				>
 					%
@@ -19,8 +19,8 @@
 					class="px-4 py-2 rounded-r"
 					:class="
 						unit === 'px'
-							? 'bg-gray-700 text-white'
-							: 'bg-gray-800 text-gray-300'
+							? 'bg-[#424242] text-[#F9F9F9]'
+							: 'bg-[#212121] text-[#AAAAAA]'
 					"
 				>
 					px
@@ -29,12 +29,12 @@
 		</div>
 
 		<div class="flex justify-between items-center">
-			<div class="text-white mb-2">Value</div>
+			<div class="text-[#AAAAAA] mb-2">Value</div>
 			<div
-				class="relative flex items-center rounded"
+				class="relative flex items-center rounded width-50"
 				:class="[
-					isHovering ? 'bg-gray-700' : 'bg-gray-800',
-					isFocused ? 'border border-blue-500 rounded' : '',
+					isHovering ? 'bg-[#424242]' : 'bg-[#212121]',
+					isFocused ? 'border border-[#3C67FF] rounded' : '',
 				]"
 			>
 				<button
@@ -43,8 +43,8 @@
 					:disabled="shouldDisableDecrement"
 					:class="
 						shouldDisableDecrement
-							? 'text-gray-500 cursor-not-allowed'
-							: 'text-white hover:bg-gray-700'
+							? 'text-[#3B3B3B] cursor-not-allowed'
+							: 'text-[#F9F9F9] hover:bg-[#424242]'
 					"
 				>
 					<span class="text-xl">−</span>
@@ -57,8 +57,8 @@
 					@mouseleave="isHovering = false"
 					@keyup="handleChange"
 					type="text"
-					class="text-white text-center w-16 outline-none z-1"
-					:class="[isHovering ? 'bg-gray-700' : 'bg-gray-800']"
+					class="text-[#F9F9F9] text-center w-16 outline-none z-1"
+					:class="[isHovering ? 'bg-[#424242]' : 'bg-[#212121]']"
 				/>
 				<button
 					@click="incrementValue"
@@ -66,8 +66,8 @@
 					:disabled="shouldDisableIncrement"
 					:class="
 						shouldDisableIncrement
-							? 'text-gray-500 cursor-not-allowed'
-							: 'text-white hover:bg-gray-700'
+							? 'text-[#3B3B3B] cursor-not-allowed'
+							: 'text-[#F9F9F9] hover:bg-[#424242]'
 					"
 				>
 					<span class="text-xl">+</span>
@@ -75,7 +75,7 @@
 
 				<!-- Tooltip -->
 				<div
-					class="tooltip mt-2 bg-gray-800 text-white text-sm px-3 py-1 rounded z-0"
+					class="tooltip mt-2 bg-[#212121] text-[#F9F9F9] text-sm px-3 py-1 rounded z-0"
 					:class="[
 						isShowTooltip ? 'showing' : 'closing',
 						tooltipPosition === 'left'
