@@ -250,6 +250,6 @@ function showTooltip(message: string) {
 	height: 7px;
 	width: 7px;
 	transform: rotate(45deg) translateX(-50%);
-	background-color: var(--color-gray-800);
+	background-color: #212121;
 }
 </style>
