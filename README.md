@@ -1,4 +1,4 @@
-[Live page](https://vuhung1001.github.io/gemcommerce-test/)
+[Live page](https://ruoivarua.github.io/gemcommerce-test/)
 
 [Figma](https://www.figma.com/design/3lRA1MFIAuIRrZkQqwtmeA/FE-Entry-test?node-id=0-1&p=f&t=52dcsgBUHhPtYd4c-0)
 
